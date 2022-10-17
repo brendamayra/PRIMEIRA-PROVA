@@ -1,2 +1,21 @@
-# PRIMEIRA-PROVA
-primeiro codigo
+#define LED 12 //DEFINE O QUE EU QUERO USAR, SEJA UM BOTÃO OU UM LED, AI COLOCA O NOME E ENTRADA/SAIDA DO COMPONENTE
+
+void blink(const int led); //CRIAÇÃO DA VARIAVEL BLINK, O QUE TEM DENTRO É O VALOR DO LED
+
+void setup()
+{
+  pinMode(LED, OUTPUT); // O LED QUE QUERO E SE A PORTA QUE COLOQUEI É ENTRADA OU SAIDA
+}
+
+void loop()
+{
+  blink(LED); //LOOP DA VARIAVEL QUE CRIEI, E ESSA VARIAVEL VAI RECEBER O LED DO DEFINE, E VAI FICAR NO LOOP
+}
+
+void blink(const int led) // MINHA FUNÇÃO, ELA VAI ACENDER A APAGAR O LED, E PARA ISSO USA O DIGITALWRITE(E SE É NIVEL ALTO OU BAIXO);
+{
+  digitalWrite(led, HIGH);
+  delay(1000);
+  digitalWrite(led, LOW);
+  delay(1000); 
+}
